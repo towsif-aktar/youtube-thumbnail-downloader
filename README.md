@@ -1,1 +1,1 @@
-# technlearn
+Youtube Thumbnail Downloader
