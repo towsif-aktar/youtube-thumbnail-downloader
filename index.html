@@ -29,7 +29,7 @@
   </script>
 
   <meta name="keywords"
-  content="SEO tools, best SEO tools, Free YouTube Thumbnail Downloader, best Thumbnail Downloader, Thumbnails, Download Thumbnails, Download YouTube Thumbails, YouTube Video Thumbnail Downloader, Youtube Thumbnail Downloader, YT, YT Thumbnail Downloader, Youtube Thumbnail Downloader HD, YouTube Thumbnail Downloader Online, Clean and Simple YouTube Thumbnail Downloader, CLean and Simple, YouTube Thumbnails, YouTube HD Thumbnail Downloader, High Definition Thumbnail Downoader, YT Thumbnail Research, Download YouTube Thumbnail, Download YouTube Thumbnails Easily">
+  content="SEO tools, best SEO tools, Free YouTube Thumbnail Downloader, best Thumbnail Downloader, Thumbnails, Download Thumbnails, Download YouTube Thumbails, YouTube Video Thumbnail Downloader, Youtube Thumbnail Downloader, YT, YT Thumbnail Downloader, Youtube Thumbnail Downloader HD, YouTube Thumbnail Downloader Online, Clean and Simple YouTube Thumbnail Downloader, Video Screenshot, best online tool to free capture photo from video, Capture photo and images from videos in seconds, powerful tool to screenshot videos online, With a few clicks you can capture highlights of videos in high quality. No downloads, Screenshot tool, Take a screenshot of any YouTube video with one click, Online to Take Screenshots of Youtube Videos, YouTube screenshot generator,Capture still image from YouTube video,">
 
 
 
@@ -225,6 +225,41 @@ input:active {
 }
 
 
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
     
     /* Set black background color, white text and some padding */
     footer {
@@ -268,11 +303,14 @@ input:active {
         <li><a href="https://www.technlearn.live/pages/contact.html">Contact</a></li>
         <li><a href="https://www.technlearn.live/pages/privacy.html">Privacy</a></li>
         <li><a href="https://www.technlearn.live/pages/disclaimer.html">Disclaimer</a></li>
-        <li class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>APPS
-        </li>
+        <div class="dropdown">
+          <button class="dropbtn">more tools</button>
+          <div class="dropdown-content">
+            <a href="#">Video Screenshot</a>
+            <!-- <a href="#">Link 2</a>
+            <a href="#">Link 3</a> -->
+          </div>
+        </div>
       </ul>
 
     </div>
