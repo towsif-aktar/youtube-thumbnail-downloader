@@ -230,23 +230,7 @@
         <div id="select-file">
           <input type="file" class="mdc-text-field__input" id="videofile" accept=".mp4" onchange="loadVideoFile()">
         </div>
-        <div id="select-url" style="display:none">
-          <label class="mdc-text-field mdc-text-field--filled">
-            <span class="mdc-text-field__ripple"></span>
-            <span class="mdc-floating-label" id="url-label">Enter Video URL</span>
-            <input id="videourl" size="100" class="mdc-text-field__input" type="text" placeholder="www.example.com"
-              aria-labelledby="url-label">
-            <span class="mdc-line-ripple"></span>
-          </label>
-          <div class="mdc-touch-target-wrapper">
-            <button class="mdc-button mdc-button--raised"
-              onclick="loadVideoURL(document.getElementById('videourl').value)">
-              <span class="mdc-button__ripple"></span>
-              <span class="mdc-button__touch"></span>
-              <span class="mdc-button__label">Load video</span>
-            </button>
-          </div>
-        </div>
+        
       </div>
       <div class="mdc-card mdc-card--outlined select-source">
         <video id="video" controls poster="https://i.ibb.co/jTM4h1g/banner-2.png" width="480">
