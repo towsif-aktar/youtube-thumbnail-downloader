@@ -28,8 +28,8 @@
         <div class="w3-bar-item w3-hover-blue"><a href="https://www.technlearn.live/tools/capture.html" style="text-decoration: none;">Video Screenshot</a></div>
       </div>
 
-<div class="w3-container w3-center">
-<div class="w3-mobile">
+<div class="w3-container w3-center" style="margin-top: 50px;">
+<div class="w3-col">
   <div class="w3-quarter w3-container w3-green w3-center" style="width: 25%; height: 300px;">
     <div class="w3-card-3 w3-center">
         <h1>AD LEFT</h1> 
@@ -40,21 +40,21 @@
   <div class="w3-threequarter w3-container w3-center" style="width: 75%;">
     <div class="w3-card-4 w3-center">
         <header class="w3-container w3-light-grey">
-          <h3>Youtube Thumbnail Downloader</h3>
+          <h3 style="font-size: 12px ;">Thumbnail Downloader</h3>
         </header>
             <div id="result" class="w3-container w3-center">
             <img src="https://i.ibb.co/QKyfThG/logo-1-320x180.png" class="img-thumbnail" id="thumbnailpreview" width="100%" height="auto" onerror="this.style.display='none'" />
         </div>
-        <br><br>
+        <br><hr>
         <div class="input-group">
             <!-- <div class="w3-container w3-center" id="inputgroup"> -->
             <input id="ytlink" autofocus type="text" class="w3-input shadow"
                 placeholder="ENTER YOUTUBE VIDEO URL" spellcheck="false"
                 onsubmit="youtube_thumbnail_downloader(ytlink.value);ShowMain()" autocomplete="off" />
-        </div><br><br>
+        </div><br>
 
         <button id="thumbdloadbtn" class="w3-button w3-block w3-dark-grey" type="button"
-            onclick="youtube_thumbnail_downloader(ytlink.value);ShowMain()"><p style="text-decoration: none; color: yellow; font-size: 20px;">DOWNLOAD</p></button>
+            onclick="youtube_thumbnail_downloader(ytlink.value);ShowMain()">DOWNLOAD</button>
       </div>
       <br>
 
