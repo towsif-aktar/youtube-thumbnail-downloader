@@ -1,213 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Video screenshot generator</title>
-  <meta name="keywords"
-  content="SEO tools, best SEO tools, Free YouTube Thumbnail Downloader, best Thumbnail Downloader, Thumbnails, Download Thumbnails, Download YouTube Thumbails, YouTube Video Thumbnail Downloader, Youtube Thumbnail Downloader, YT, YT Thumbnail Downloader, Youtube Thumbnail Downloader HD, YouTube Thumbnail Downloader Online, Clean and Simple YouTube Thumbnail Downloader, Video Screenshot, best online tool to free capture photo from video, Capture photo and images from videos in seconds, powerful tool to screenshot videos online, With a few clicks you can capture highlights of videos in high quality. No downloads, Screenshot tool, Take a screenshot of any YouTube video with one click, Online to Take Screenshots of Youtube Videos, YouTube screenshot generator,Capture still image from YouTube video,">
-  <style>
-    body {
-      padding: 0;
-      margin: 0;
-    }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/98b7bd5607.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+    <meta name="keywords"
+    content="SEO tools, best SEO tools, Free YouTube Thumbnail Downloader, best Thumbnail Downloader, Thumbnails, Download Thumbnails, Download YouTube Thumbails, YouTube Video Thumbnail Downloader, Youtube Thumbnail Downloader, YT, YT Thumbnail Downloader, Youtube Thumbnail Downloader HD, YouTube Thumbnail Downloader Online, Clean and Simple YouTube Thumbnail Downloader, Video Screenshot, best online tool to free capture photo from video, Capture photo and images from videos in seconds, powerful tool to screenshot videos online, With a few clicks you can capture highlights of videos in high quality. No downloads, Screenshot tool, Take a screenshot of any YouTube video with one click, Online to Take Screenshots of Youtube Videos, YouTube screenshot generator,Capture still image from YouTube video,">
+  
+    <title>Video Capture</title>
+</head>
+<body>
+    <div class="w3-container">
+        <div class="w3-bar w3-black">
+          <a href="https://www.technlearn.live" class="w3-bar-item w3-button w3-mobile w3-orange">Home</a>
+          <a href="https://www.technlearn.live/pages/about.html" class="w3-bar-item w3-button w3-mobile">About Us</a>
+          <a href="https://www.technlearn.live/pages/contact.html" class="w3-bar-item w3-button w3-mobile">Contact Us</a>
+          <div class="w3-dropdown-hover w3-mobile">
+            <button class="w3-button">More<i class="fa fa-caret-down"></i></button>
+            <div class="w3-dropdown-content w3-bar-block w3-orange">
+              <a href="https://www.technlearn.live/tools/capture.html" class="w3-bar-item w3-button w3-mobile">Video Snapshot</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <!-- ///////////////////////////////// -->
 
-    main {
-      display: flex;
-    }
+      <div class="w3-container w3-center w3-mobile">
+        <div class="w3-card-4 w3-center w3-mobile">
+            <video style="margin-top: 20px;" id="video" controls poster="https://img.youtube.com/vi/IT-jCZY_YDM/hqdefault.jpg" width="480">
+                <source src="blank.mp4" type="video/mp4">
+              </video>
 
-    canvas {
-      border: 1px solid #ddd;
-      max-width: 45vw;
-      max-height: 90vh;
-      margin-bottom: 15px;
-    }
+              <br>
+              <div class="w3-container w3-center w3-mobile" id="select-file">
+                <h1>Choose Your Video File!</h1>
+                <hr>
+                <input type="file" class="w3-input w3-center w3-mobile" id="videofile" accept=".mp4" onchange="loadVideoFile()">
+              </div><br>
+              <div id="videoInfo" class="w3-card w3-center w3-mobile">
+              </div>
+        </div>
 
-    .mdc-top-app-bar__row {
-      height: 50px !important;
-    }
+      </div>
 
-    .mdc-top-app-bar--fixed-adjust {
-      padding-top: 50px !important;
-    }
+      <!-- ///////////////////////////////// -->
+<div class="w3-container w3-center w3-mobile">
+    <label id="videowidth">
+    <input id="videow" type=number size="5" onchange="resize()" value="360" class="w3-input"
+              type="text" placeholder="" aria-labelledby="size-label" readonly></label>
+              <button id="snap"  class="w3-button w3-center w3-mobile w3-orange" style="height: auto; width: 25%;" onclick="snapPicture()" disabled>
+                <span>SnapShot</span>
+                <span></span>
+              </button>
+</div>
+<!-- /////////////////////////////// -->
+<div class="w3-container w3-center w3-mobile">
+    <canvas id="canvas" width="480" height="360"></canvas>
+</div>
 
-    video {
-      max-width: 45vw;
-      max-height: 90vh;
-      margin-bottom: 10px;
-    }
+<div class="w3-center w3-mobile">
+    <button id="save" class="w3-button w3-light-green"  style="width: 20%; height: auto;" onclick="savePicture()" disabled>
+      <span>Save Image</span>
+    </button>
+    <a href="" id="imagelink" style="display:none"></a>
+  </div><br>
+<!-- ///////////////////////////// -->
 
-    #videourl {
-      max-width: 82%;
-    }
+    <!-- ///////////////////////////////// -->
+    <div  class="w3-container w3-center w3-mobile">
+        <div class="w3-container w3-center w3-mobile">
+            <div class="ad-hm-slot">
+                <div id="hm-billboard-3" class="ad-slot">
+                </div>
+            </div>
+        </div>
 
-    #videoInfo {
-      background-color: #eee;
-      display: none;
-    }
-
-    main>div {
-      margin: 20px 12px;
-    }
-
-    .select-source {
-      padding: 12px;
-      flex-wrap: wrap;
-    }
-
-    
-
-    .toolbar-menu {
-      color: #fff !important;
-      padding-right: 12px;
-    }
-
-    .video_data {
-      width: 50%;
-    }
-
-    .video_output {
-      display: flex;
-      flex: 1;
-    }
-
-    .video_output > .mdc-card{
-      width: 100%;
-    }
+    <footer id="footer" class="w3-container w3-center w3-blue">
+            <div id="social-media">
+                <!-- Social Media Icons -->
+                <a href="https://www.facebook.com/thevirus2020" <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://twitter.com/towsif_aktar" <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UC2So8EXbLprgKOqRc64VWNw" <i class="fa-brands fa-youtube"></i>
+                </a>
+          <a href="https://github.com/hobby-tech" <i class="fa-brands fa-github"></i>
+                </a>
+          
+                <!-- Social Media Icons -->
+          
+          
+            </div>
+            <hr style="background: #ffffff; width: 50vw; opacity: 0.25;">
+            <p style="display: inline;">Designed<lord-icon
+          src="https://cdn.lordicon.com/gqqykmqo.json"
+          trigger="loop"
+          style="width:50px;height:50px">
+          </lord-icon>  by <a
+                    target="_blank" href="https://github.com/hobby-tech">TOWSIF</a></p>
+          </footer>
+    </div>
 
 
-    .mdc-touch-target-wrapper {
-      position: absolute;
-      top: 22px;
-      right: 12px;
-    }
 
-    .mdc-text-field--filled {
-      background-color: #fff !important;
-    }
 
-    .mdc-text-field--filled:active {
-      background-color: #fff !important;
-    }
+</body>
+</html>
 
-    .snap_photo_btn {
-      margin-bottom: 7px;
-      margin-left: 15px;
-    }
 
-    .buttons {
-      display: flex;
-    }
 
-    .buttons h4 {
-      padding-right: 15px;
-      font-family: Roboto;
-      font-weight: normal;
-      color: rgba(0, 0, 0, 0.87);
-    }
-
-    .space {
-      width: 20px;
-    }
-
-    .mdc-card{
-      font-family: Roboto, sans-serif;
-      padding: 8px;
-      margin: 4px 0;
-    }
-
-    .snap_button {
-      background: #6200ee;
-      border: 0;
-      border-radius: 4px;
-      padding: 0 15px 2px;
-      font-size: inherit;
-      color: #fff;
-      cursor: pointer;
-      box-shadow: 0px 5px 3px -3px rgba(0, 0, 0, 0.50);
-      height: 37px;
-      margin: 10px 0;
-    }
-
-    .snap_button:hover {
-      background: #8731ff;
-      transition: all 0.3s;
-    }
-
-    .snap_button:active {
-      background: #c49dff;
-    }
-
-    .canvas-container{
-      margin-top:16px;
-    }
-    #videoControls > div{
-      margin: 8px 0;
-    }
-    #videoControls button{
-      font-size: 2em;
-      border-radius: 5px;
-      background-color: #eee;
-      border: 1px solid #aaa;
-    }
-    
-    #videoControls button > span{
-      font-size: 16px;
-    }
-
-    @media (max-width:1023px){
-      main{
-        flex-wrap: wrap;
-      }
-      .video_data{
-        width: 100%;
-      }
-      .video_output{
-        width: 100%;
-      }
-      video{
-        max-width: 90vw;
-      }
-      canvas{
-        max-width: 90vw;
-      }
-    }
-    @media (max-width:600px){
-      #videoControls button {
-        font-size: 20px;
-      }
-    }
-    @media (max-width:480px){
-      #snap{
-        width: 100px;
-      }
-      #videoControls > div{
-        display: flex;
-        justify-content: space-between;
-      }
-      #videoControls button {
-        font-size: 18px;
-        padding: 0 4px;
-      }
-      #videoControls button > span{
-        display: block;
-        text-align: center;
-      }
-    }
-  </style>
- 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <script>
+<!-- ////////////////////////////// -->
+<script>
     function showInput(id, opt) {
       console.log(opt)
       document.getElementById('select-file').style.display = 'none';
-      document.getElementById('select-url').style.display = 'none';
+      // document.getElementById('select-url').style.display = 'none';
       document.getElementById(id).style.display = '';
     }
     function loadPage() {
-      var textFields = document.querySelectorAll('.mdc-text-field');
+      var textFields = document.querySelectorAll('.');
       for (let index = 0; index < textFields.length; index++) {
         var element = textFields[index];
         new mdc.textField.MDCTextField(element);
@@ -215,65 +130,9 @@
     }
     window.addEventListener("load", loadPage);
   </script>
-</head>
 
-<body>
 
-  <main class="mdc-top-app-bar--fixed-adjust">
-    <div class="video_data">
-      <div class="mdc-card mdc-card--outlined">
-        
-        </div>
-      </div>
-      <br />
-      <div class="mdc-card mdc-card--outlined select-source">
-        <div id="select-file">
-          <input type="file" class="mdc-text-field__input" id="videofile" accept=".mp4" onchange="loadVideoFile()">
-        </div>
-        
-      </div>
-      <div class="mdc-card mdc-card--outlined select-source">
-        <video id="video" controls poster="https://i.ibb.co/jTM4h1g/banner-2.png" width="480">
-          <source src="blank.mp4" type="video/mp4">
-        </video>
-        <div id="videoInfo" class="mdc-card">
-        </div>
-      </div>
-    </div>
 
-    <div class="video_output">
-      <div class="mdc-card mdc-card--outlined select-source">
-        <div>
-          <label class="mdc-text-field mdc-text-field--filled" id="videowidth">
-            <span class="mdc-text-field__ripple"></span>
-            <!-- <span class="mdc-floating-label" id="size-label">Image width</span> -->
-            <input id="videow" type=number size="5" onchange="resize()" value="360" class="mdc-text-field__input"
-              type="text" placeholder="" aria-labelledby="size-label" readonly>
-            <span class="mdc-line-ripple"></span>
-          </label>
-          <button id="snap" class="mdc-button mdc-button--raised snap_photo_btn" onclick="snapPicture()" disabled>
-            <span class="mdc-button__ripple"></span>
-            <span class="mdc-button__touch"></span>
-            <span class="mdc-button__label">ScreenShot</span>
-            <span></span>
-          </button>
-        </div>
-        <div class="canvas-container">
-          <canvas id="canvas" width="480" height="360"></canvas>
-        </div>
-        <div>
-          <button id="save" class="mdc-button mdc-button--raised save_btn" onclick="savePicture()" disabled>
-            <span class="mdc-button__ripple"></span>
-            <span class="mdc-button__touch"></span>
-            <span class="mdc-button__label save_txt">Save Image</span>
-            <span></span>
-          </button>
-          <a href="" id="imagelink" style="display:none"></a>
-        </div>
-      </div>
-    </div>
-
-  </main>
 
   <!-- start the script ... within that declare variables as follows... -->
   <script>
@@ -406,7 +265,3 @@ window.addEventListener("load", function () {
 })
 
   </script>
-
-</body>
-
-</html>
