@@ -1,9 +1,92 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-		<!--	created with www.mysitemapgenerator.com	-->
-		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
 <url>
-	<loc>https://www.hobby-tech.info.bd/</loc>
-	<lastmod>2023-10-13T22:26:21+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>https://www.hobby-tech.info.bd/</loc>
+  <lastmod>2023-10-13T19:12:44+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
+<url>
+  <loc>https://www.hobby-tech.info.bd/p/youtube-thumbnail-downloader.html</loc>
+  <lastmod>2023-10-13T19:12:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hobby-tech.info.bd/p/video-snapshoot-screen-capture.html</loc>
+  <lastmod>2023-10-13T19:12:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hobby-tech.info.bd/p/youtube-subscribe-link-generator.html</loc>
+  <lastmod>2023-10-13T19:12:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hobby-tech.info.bd/2023/10/eh-nd13-hair-dryers-panasonic.html</loc>
+  <lastmod>2023-10-13T19:12:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hobby-tech.info.bd/2023/10/philips-hp8108-dry-care-hair-dryer.html</loc>
+  <lastmod>2023-10-13T19:12:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hobby-tech.info.bd/2023/10/wahl-zx962-powerpik-3000-hair-dryer-for.html</loc>
+  <lastmod>2023-10-13T19:12:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hobby-tech.info.bd/2023/10/parachute-orange-facewash-anti-pimple.html</loc>
+  <lastmod>2023-10-13T19:12:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hobby-tech.info.bd/2023/10/parachute-aloe-vera-face-wash-and-go-on.html</loc>
+  <lastmod>2023-10-13T19:12:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hobby-tech.info.bd/2023/10/mehedi-gurahenna-powder-100-gm.html</loc>
+  <lastmod>2023-10-13T19:12:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hobby-tech.info.bd/2023/10/fat-cutter-detox-powder-herbs-for.html</loc>
+  <lastmod>2023-10-13T19:12:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hobby-tech.info.bd/2023/10/nivea-men-creme-75ml-from-uk.html</loc>
+  <lastmod>2023-10-13T19:12:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hobby-tech.info.bd/2023/10/ribana-saffron-brightening-gel-130-ml.html</loc>
+  <lastmod>2023-10-13T19:12:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hobby-tech.info.bd/2023/10/studio-x-power-brightening-cream-60gm.html</loc>
+  <lastmod>2023-10-13T19:12:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hobby-tech.info.bd/p/about-us.html</loc>
+  <lastmod>2023-10-13T19:12:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.hobby-tech.info.bd/p/terms-of-service.html</loc>
+  <lastmod>2023-10-13T19:12:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
 </urlset>
